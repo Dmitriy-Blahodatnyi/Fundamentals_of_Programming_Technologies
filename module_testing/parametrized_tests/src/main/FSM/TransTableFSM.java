@@ -25,10 +25,7 @@ public class TransTableFSM extends FSM {
     }
 
     protected State nextState(Event event) {
-        for (Transition cur : transitions)
-            if (cur.currentState == currentState && cur.trigger == event)
-                return cur.nextState;
-        return null;
+        return transitions.stream().filter(cur -> cur.currentState == currentState && cur.trigger == event).findFirst().map(cur -> cur.nextState).orElse(null);
     }
 
     class Transition {

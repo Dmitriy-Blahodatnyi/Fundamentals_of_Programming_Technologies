@@ -50,12 +50,11 @@ public class Matrix {
 
     public String toString() {
         StringBuilder builder = new StringBuilder("MATRIX={");
-        for (double[] aMatrix : this.matrix) {
+        Arrays.stream(this.matrix).forEach(aMatrix -> {
             builder.append(" [ ");
-            for (int j = 0; j < this.matrix[0].length; j++)
-                builder.append(String.format("%.2f ", aMatrix[j]));
+            IntStream.range(0, this.matrix[0].length).mapToObj(j -> String.format("%.2f ", aMatrix[j])).forEach(builder::append);
             builder.append("] ");
-        }
+        });
         builder.append("}");
         return builder.toString();
     }

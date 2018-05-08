@@ -33,7 +33,7 @@ interface TestInterfaceDynamicTests {
                                 })).getMessage()))),
                 dynamicTest("matrix.Matrix successful generation check!!!", () -> {
                     double matrix[][] = new double[][]{{1}, {11.2}, {3}};
-                    Matrix mx = new Matrix(matrix);
+                    var mx = new Matrix(matrix);
 
                     assertSame(matrix, mx.getMatrix());
                     assertArrayEquals(matrix, mx.getMatrix());

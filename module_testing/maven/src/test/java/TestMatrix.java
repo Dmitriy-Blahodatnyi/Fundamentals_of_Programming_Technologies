@@ -13,7 +13,7 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'toString'!!!")
     void testToString() {
-        Matrix mx = new Matrix(new double[][]{{1}, {11.2}, {3}});
+        var mx = new Matrix(new double[][]{{1}, {11.2}, {3}});
         assertEquals("MATRIX=" +
                 "{" +
                 " [ 1.00 ] " +
@@ -32,8 +32,8 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'equals' failure!!!")
     void testEqualsMethodException() {
-        Matrix mx = new Matrix(new double[][]{{1}, {11.2}, {3}});
-        Matrix mx1 = new Matrix(new double[][]{{1}, {11.2}, {34.4}});
+        var mx = new Matrix(new double[][]{{1}, {11.2}, {3}});
+        var mx1 = new Matrix(new double[][]{{1}, {11.2}, {34.4}});
         assertNotSame(mx, mx1);
         assertNotEquals(mx, mx1);
         assertNotEquals(mx, null);
@@ -42,8 +42,8 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'equals' success!!!")
     void testEqualsMethodSuccess() {
-        Matrix mx = new Matrix(new double[][]{{1}, {11.2}, {3}});
-        Matrix mx1 = new Matrix(new double[][]{{1}, {11.2}, {3}});
+        var mx = new Matrix(new double[][]{{1}, {11.2}, {3}});
+        var mx1 = new Matrix(new double[][]{{1}, {11.2}, {3}});
         assertNotSame(mx, mx1);
         assertEquals(mx, mx1);
         assertEquals(mx, mx);
@@ -53,11 +53,11 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'multiply by number'!!!")
     void testScalarMultiply() {
-        double[][] matrix = new double[][]{{1, 2, 3}, {3, 4, 5}};
-        double[][] finalMatrix = matrix;
-        double[][] finalMatrix1 = matrix;
+        var matrix = new double[][]{{1, 2, 3}, {3, 4, 5}};
+        var finalMatrix = matrix;
+        var finalMatrix1 = matrix;
         matrix = new double[][]{{1, 2, 3}, {3, 4, 5}, {9.8, 56.6, 78.7}};
-        double[][] finalMatrix2 = matrix;
+        var finalMatrix2 = matrix;
         assertAll("Assertion all of these examples: ",
                 () -> assertArrayEquals(new Array2DRowRealMatrix(finalMatrix).scalarMultiply(2).getData(),
                         new Matrix(finalMatrix).multiply(2).getMatrix()),
@@ -70,8 +70,8 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'multiply by matrix' failure!!!")
     void testMultiplyByMatrixException() {
-        int aColumns = 3;
-        int bRows = 2;
+        var aColumns = 3;
+        var bRows = 2;
         assertEquals("Count of columns: " + aColumns +
                         " of matrix-multiplicand IS NOT EQUAL TO count of rows: " + bRows +
                         " of matrix-multiplier => unable to multiply!!!",
@@ -88,11 +88,11 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'multiply by matrix' success!!!")
     void testMultiplyByMatrixSuccess() {
-        double[][] multiplicand = new double[][]{
+        var multiplicand = new double[][]{
                 {12.3, 56.45, 87.67},
                 {52.87, 0, -64.24},
         };
-        double[][] multiplier = new double[][]{
+        var multiplier = new double[][]{
                 {14.87, 90.5},
                 {-81.4, 76.56},
                 {83.4, 71.12}
@@ -120,11 +120,11 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'addMatrix' success!!!")
     void testAddMatrixSuccess() {
-        double[][] augend = new double[][]{
+        var augend = new double[][]{
                 {12.3, 56.45, 87.67},
                 {52.87, 0, -64.24},
         };
-        double[][] addend = new double[][]{
+        var addend = new double[][]{
                 {14.87, 90.5, -123.987},
                 {-81.4, 76.56, 76.45}
         };
@@ -154,7 +154,7 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
     @Test
     @DisplayName("Testing method 'findInvertibleMatrix' success!!!")
     void testInverseMatrixSuccess() {
-        double[][] matrix = new double[][]{
+        var matrix = new double[][]{
                 {1.1, 34.65, 97.12},
                 {0.3, 1.2, 4},
                 {5.55, 6.56, 0.1}
@@ -162,8 +162,9 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
         RealMatrix realMatrix = new Array2DRowRealMatrix(matrix);
 
         matrix = new Matrix(matrix).findInvertibleMatrix().getMatrix();
-        double[][] real = new LUDecomposition(realMatrix).getSolver().getInverse().getData();
-        for (int i = 0; i < matrix.length; i++)
-            for (int j = 0; j < matrix[0].length; j++) assertEquals(real[i][j], matrix[i][j], 0.00000000000001d);
+        var real = new LUDecomposition(realMatrix).getSolver().getInverse().getData();
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[0].length; j++) assertEquals(real[i][j], matrix[i][j], 0.00000000000001d);
+        }
     }
 }

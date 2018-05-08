@@ -17,7 +17,6 @@ public class Evaluator {
                                         (new MatrixLexer(
                                                 CharStreams.fromString(str))))
                                 .input())
-                .getValue()
                 .toString();
     }
 }

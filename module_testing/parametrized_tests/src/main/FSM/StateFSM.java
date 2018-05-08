@@ -21,7 +21,7 @@ public class StateFSM extends FSM {
 
     protected State nextState(Event event) {
         if (event == null) return null;
-        AbstractState state = setState(currentState);
+        var state = setState(currentState);
         switch (event) {
             case UNDERSCORE:
                 return state.underscore();

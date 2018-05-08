@@ -23,7 +23,7 @@ public abstract class FSM {
     public boolean scan(String str) {
         if (str == null) return false;
         currentState = State.q0;
-        for (char ch : str.toCharArray()) {
+        for (var ch : str.toCharArray()) {
             if (currentState == null) return false;
             currentState = nextState(recognizeEvent(ch));
         }

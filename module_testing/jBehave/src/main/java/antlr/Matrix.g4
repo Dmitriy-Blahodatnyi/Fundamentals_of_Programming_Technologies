@@ -16,7 +16,7 @@ MULTIPLE: '*';
 INVERSE: '^-1';
 
 root:
-     input EOF# RootRule
+     input EOF # RootRule
 ;
 
 input:

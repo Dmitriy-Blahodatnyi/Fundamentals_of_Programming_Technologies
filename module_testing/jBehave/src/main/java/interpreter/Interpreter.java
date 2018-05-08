@@ -8,81 +8,77 @@ import parser.MatrixParse;
 
 import java.util.HashMap;
 
-public class Interpreter extends MatrixBaseVisitor<Variable> {
-    private HashMap<String, Variable> variables = new HashMap<>();
+public class Interpreter extends MatrixBaseVisitor<Object> {
+    private HashMap<String, Object> variables = new HashMap<>();
 
-    public Variable visitRootRule(MatrixParser.RootRuleContext ctx) {
+    public Object visitRootRule(MatrixParser.RootRuleContext ctx) {
         return visit(ctx.input());
     }
 
-    public Variable visitToSetVariable(MatrixParser.ToSetVariableContext ctx) {
+    public Object visitToSetVariable(MatrixParser.ToSetVariableContext ctx) {
         return visit(ctx.assignment());
     }
 
-    public Variable visitExecuteExpression(MatrixParser.ExecuteExpressionContext ctx) {
+    public Object visitExecuteExpression(MatrixParser.ExecuteExpressionContext ctx) {
         return visit(ctx.sum());
     }
 
-    public Variable visitMakeAssignment(MatrixParser.MakeAssignmentContext ctx) {
-        String text = ctx.ID().getText();
+    public Object visitMakeAssignment(MatrixParser.MakeAssignmentContext ctx) {
+        var text = ctx.ID().getText();
         variables.put(text, visit(ctx.sum()));
         return variables.get(text);
     }
 
-    public Variable visitToMultiple(MatrixParser.ToMultipleContext ctx) {
+    public Object visitToMultiple(MatrixParser.ToMultipleContext ctx) {
         return visit(ctx.multiple());
     }
 
-    public Variable visitMakePlus(MatrixParser.MakePlusContext ctx) {
-        Variable var0 = visit(ctx.multiple());
-        Variable var1 = visit(ctx.sum());
-        if (var0.getType() != Matrix.class || var1.getType() != Matrix.class)
-            throw new ParseCancellationException("Invalid type!!!");
-        return new Variable<>(((Matrix) var0.getValue()).addMatrix((Matrix) var1.getValue()));
+    public Object visitMakePlus(MatrixParser.MakePlusContext ctx) {
+        var var0 = visit(ctx.multiple());
+        var var1 = visit(ctx.sum());
+        return var0.getClass() != Matrix.class || var1.getClass() != Matrix.class ?
+                new ParseCancellationException("Invalid type!!!") :
+                ((Matrix) var0).addMatrix((Matrix) var1);
     }
 
-    public Variable visitMakeMultiple(MatrixParser.MakeMultipleContext ctx) {
-        Variable var0 = visit(ctx.multiple());
-        Variable var1 = visit(ctx.inverse());
-        if (var0.getType() == Matrix.class && var1.getType() == Double.class)
-            return new Variable<>(((Matrix) var0.getValue()).multiply((Double) var1.getValue()));
-        else if (var1.getType() == Matrix.class && var0.getType() == Double.class)
-            return new Variable<>(((Matrix) var1.getValue()).multiply((Double) var0.getValue()));
-        else
-            return new Variable<>(((Matrix) var0.getValue()).multiply((Matrix) var1.getValue()));
+    public Object visitMakeMultiple(MatrixParser.MakeMultipleContext ctx) {
+        var var0 = visit(ctx.multiple());
+        var var1 = visit(ctx.inverse());
+        return var0.getClass() == Matrix.class && var1.getClass() == Double.class ?
+                ((Matrix) var0).multiply((Double) var1) :
+                var1.getClass() == Matrix.class && var0.getClass() == Double.class ?
+                        ((Matrix) var1).multiply((Double) var0) :
+                        ((Matrix) var0).multiply((Matrix) var1);
     }
 
-    public Variable visitToInverse(MatrixParser.ToInverseContext ctx) {
+    public Object visitToInverse(MatrixParser.ToInverseContext ctx) {
         return visit(ctx.inverse());
     }
 
-    public Variable visitMakeInverse(MatrixParser.MakeInverseContext ctx) {
-        Variable var = visit(ctx.inverse());
-        if (var.getType() != Matrix.class)
-            throw new ParseCancellationException("Operand should be matrix!!!");
-        return new Variable<>(((Matrix) var.getValue()).findInvertibleMatrix());
+    public Object visitMakeInverse(MatrixParser.MakeInverseContext ctx) {
+        return visit(ctx.inverse()).getClass() != Matrix.class ?
+                new ParseCancellationException("Operand should be matrix!!!") :
+                ((Matrix) visit(ctx.inverse())).findInvertibleMatrix();
     }
 
-    public Variable visitToAtom(MatrixParser.ToAtomContext ctx) {
+    public Object visitToAtom(MatrixParser.ToAtomContext ctx) {
         return visit(ctx.atom());
     }
 
-    public Variable visitMakeNumber(MatrixParser.MakeNumberContext ctx) {
-        return new Variable<>(Double.parseDouble(ctx.NUMBER().toString()));
+    public Object visitMakeNumber(MatrixParser.MakeNumberContext ctx) {
+        return Double.parseDouble(ctx.NUMBER().toString());
     }
 
-    public Variable visitMakeMatrix(MatrixParser.MakeMatrixContext ctx) {
-        return new Variable<>(MatrixParse.parse(ctx.MATRIX().toString()));
+    public Object visitMakeMatrix(MatrixParser.MakeMatrixContext ctx) {
+        return MatrixParse.parse(ctx.MATRIX().toString());
     }
 
-    public Variable visitVariable(MatrixParser.VariableContext ctx) {
-        Variable var = variables.get(ctx.ID().getText());
-        if (var == null)
-            throw new ParseCancellationException("Variable is not defined!!!");
-        return var;
+    public Object visitVariable(MatrixParser.VariableContext ctx) {
+        var var = variables.get(ctx.ID().getText());
+        return var == null ? new ParseCancellationException("Variable is not defined!!!") : var;
     }
 
-    public Variable visitMakeBraces(MatrixParser.MakeBracesContext ctx) {
+    public Object visitMakeBraces(MatrixParser.MakeBracesContext ctx) {
         return visit(ctx.sum());
     }
 }

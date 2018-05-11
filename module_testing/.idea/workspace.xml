@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1214781-09bc-449f-ae2d-9ee610056048" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam/src/main/java/StringReverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam/src/main/java/StringReverse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/jBehave/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/Matrix.g4" beforeDir="false" afterPath="$PROJECT_DIR$/jBehave/src/main/java/antlr/Matrix.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/Matrix.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixBaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixBaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixLexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/evaluator/Evaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/jBehave/src/main/java/evaluator/Evaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/interpreter/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/jBehave/src/main/java/interpreter/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/interpreter/Variable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jBehave/src/main/java/parser/MatrixParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/jBehave/src/main/java/parser/MatrixParse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven/src/main/java/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/maven/src/main/java/matrix/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven/src/test/java/TestInterfaceDynamicTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/maven/src/test/java/TestInterfaceDynamicTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maven/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/maven/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maven/src/test/java/TestMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/maven/src/test/java/TestMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parametrized_tests/src/main/FSM/FSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/parametrized_tests/src/main/FSM/FSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parametrized_tests/src/main/FSM/StateFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/parametrized_tests/src/main/FSM/StateFSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parametrized_tests/src/main/FSM/TransTableFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/parametrized_tests/src/main/FSM/TransTableFSM.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/jBehave/target/" />
     <ignored path="$PROJECT_DIR$/maven/target/" />
@@ -38,53 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FSM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/FSM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestFSM.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/parametrized_tests/src/test/TestFSM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="87" column="59" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwitchFSM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/SwitchFSM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransTableFSM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/TransTableFSM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateFSM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/StateFSM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,10 +61,11 @@
         <option value="$PROJECT_DIR$/jBehave/src/main/java/interpreter/Interpreter.java" />
         <option value="$PROJECT_DIR$/jBehave/src/main/java/parser/MatrixParse.java" />
         <option value="$PROJECT_DIR$/maven/src/test/java/TestInterfaceDynamicTests.java" />
-        <option value="$PROJECT_DIR$/maven/src/test/java/TestMatrix.java" />
         <option value="$PROJECT_DIR$/parametrized_tests/src/main/FSM/FSM.java" />
         <option value="$PROJECT_DIR$/parametrized_tests/src/main/FSM/StateFSM.java" />
         <option value="$PROJECT_DIR$/parametrized_tests/src/main/FSM/TransTableFSM.java" />
+        <option value="$PROJECT_DIR$/maven/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/maven/src/test/java/TestMatrix.java" />
       </list>
     </option>
   </component>
@@ -152,16 +87,19 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jBehave" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="maven" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jBehave" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="maven" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
     </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
@@ -176,31 +114,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="module_tesing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parametrized_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="module_tesing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parametrized_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="module_tesing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parametrized_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,7 +156,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Sorting_algorithms/sorting_algorithms" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Data_Structures/labs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -238,7 +176,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestFSM">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="maven" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="jBehave" />
@@ -253,23 +196,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Storage" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="TestConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="exam" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestConverter" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -354,19 +280,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestConverter" />
       <item itemvalue="JUnit.TestFSM" />
       <item itemvalue="JUnit.Storage" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestMatrix" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestFSM" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.TestMatrix" />
+        <item itemvalue="JUnit.TestFSM" />
         <item itemvalue="JUnit.Storage" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestConverter" />
       </list>
     </recent_temporary>
   </component>
@@ -386,16 +312,11 @@
       <workItem from="1525685730379" duration="906000" />
       <workItem from="1525793696382" duration="5414000" />
       <workItem from="1525800443298" duration="655000" />
+      <workItem from="1525968519380" duration="3945000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestFSM - 2018.05.04 at 23h 42m 32s.xml">
-      <configuration name="TestFSM" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Storage - 2018.05.04 at 23h 46m 46s.xml">
-      <configuration name="Storage" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestReverseString - 2018.05.04 at 23h 50m 21s.xml">
       <configuration name="TestReverseString" configurationId="JUnit" />
     </history-entry>
@@ -420,9 +341,15 @@
     <history-entry file="TestFSM - 2018.05.08 at 20h 37m 25s.xml">
       <configuration name="TestFSM" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestMatrix - 2018.05.10 at 20h 52m 06s.xml">
+      <configuration name="TestMatrix" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMatrix - 2018.05.10 at 20h 52m 29s.xml">
+      <configuration name="TestMatrix" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20657000" />
+    <option name="totallyTimeSpent" value="24602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -446,7 +373,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2825397" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23174603" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16302083" />
       <window_info id="Learn" order="2" />
@@ -593,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maven/src/test/java/logger/TestLifecycleLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maven/src/test/java/logger/TimeExecutionLogger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -629,40 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exam/src/main/java/StringReverse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam/src/test/java/TestConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam/src/test/java/TestReverseString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam/src/main/java/Converter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/antlr/classes/MatrixBaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2036">
@@ -677,76 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/evaluator/Evaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/interpreter/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1690">
-          <caret line="77" column="72" lean-forward="true" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/parser/MatrixParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jBehave/src/test/java/Step.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jBehave/src/test/java/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maven/src/test/java/TestInterfaceDynamicTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maven/src/test/java/TestMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="159" column="33" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maven/src/main/java/matrix/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="151" column="27" selection-start-line="151" selection-start-column="27" selection-end-line="151" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maven/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -757,31 +577,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/FSM.java">
+    <entry file="file://$PROJECT_DIR$/exam/src/main/java/StringReverse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        <state relative-caret-position="104">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/SwitchFSM.java">
+    <entry file="file://$PROJECT_DIR$/exam/src/test/java/TestConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="253">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exam/src/test/java/TestReverseString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exam/src/main/java/Converter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/interpreter/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/evaluator/Evaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/parser/MatrixParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jBehave/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jBehave/src/test/java/Step.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jBehave/src/test/java/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven/src/main/java/matrix/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven/src/test/java/logger/TestLifecycleLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven/src/test/java/TestMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="164" column="82" selection-start-line="164" selection-start-column="82" selection-end-line="164" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/TransTableFSM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state relative-caret-position="-28">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/SwitchFSM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parametrized_tests/src/test/TestFSM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="87" column="59" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+        <state relative-caret-position="362">
+          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parametrized_tests/src/main/FSM/FSM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -842,7 +769,6 @@
             <option name="proportions">
               <list>
                 <option value="0.49107143" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

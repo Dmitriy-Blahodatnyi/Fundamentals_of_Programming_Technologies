@@ -1,5 +1,12 @@
+import java.io.IOException;
+
 class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        var variable = 10;
+        System.out.println(variable);
+        var str = System.in.read();
+        if (str == 1)
+            System.exit(0);
     }
 }
 

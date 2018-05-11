@@ -163,8 +163,8 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
 
         matrix = new Matrix(matrix).findInvertibleMatrix().getMatrix();
         var real = new LUDecomposition(realMatrix).getSolver().getInverse().getData();
-        for (var i = 0; i < matrix.length; i++) {
-            for (var j = 0; j < matrix[0].length; j++) assertEquals(real[i][j], matrix[i][j], 0.00000000000001d);
-        }
+        for (var i = 0; i < matrix.length; i++)
+            for (var j = 0; j < matrix[0].length; j++)
+                assertEquals(real[i][j], matrix[i][j], 0.00000000000001d);
     }
 }

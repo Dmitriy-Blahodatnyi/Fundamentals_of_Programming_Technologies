@@ -25,7 +25,6 @@ class TestFSM implements TestLifecycleLogger, TimeExecutionLogger {
     }
 
     static class FSMProvider implements ArgumentsProvider {
-        @Override
         public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
             return Stream.of(
                     Arguments.of(null, false),

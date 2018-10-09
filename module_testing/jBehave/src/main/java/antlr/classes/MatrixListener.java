@@ -1,4 +1,4 @@
-// Generated from /home/dima/Fundamentals_of_Programming_Technologies/module_testing/jBehave/src/main/java/antlr/Matrix.g4 by ANTLR 4.7
+// Generated from /home/dima/Java/Fundamentals_of_Programming_Technologies/module_testing/jBehave/src/main/java/antlr/Matrix.g4 by ANTLR 4.7
 package antlr.classes;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

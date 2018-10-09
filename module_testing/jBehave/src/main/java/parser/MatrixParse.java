@@ -23,7 +23,7 @@ public class MatrixParse {
             for (var j = 0; j < numbers.length; j++)
                 doubles[i][j] = Double.parseDouble(numbers[j]);
             substring = substring
-                    .substring(cb + 1, substring.length());
+                    .substring(cb + 1);
         }
 
         return new Matrix(doubles);

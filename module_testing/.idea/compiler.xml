@@ -12,9 +12,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="exam" target="10" />
-      <module name="jBehave" target="10" />
-      <module name="maven" target="10" />
+      <module name="exam" target="11" />
+      <module name="jBehave" target="11" />
+      <module name="maven" target="11" />
       <module name="tree" target="10" />
     </bytecodeTargetLevel>
   </component>

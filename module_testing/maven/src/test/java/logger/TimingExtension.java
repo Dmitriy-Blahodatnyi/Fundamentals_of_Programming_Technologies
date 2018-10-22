@@ -20,9 +20,9 @@ public class TimingExtension implements BeforeTestExecutionCallback, AfterTestEx
     }
 
     public void afterTestExecution(ExtensionContext context) {
-        Method testMethod = context.getRequiredTestMethod();
+        var testMethod = context.getRequiredTestMethod();
         long startTime = getStore(context).remove(START_TIME, long.class);
-        long duration = System.currentTimeMillis() - startTime;
+        var duration = System.currentTimeMillis() - startTime;
 
         logger.info(() -> String.format("Method [%s] took %s ms.", testMethod.getName(), duration));
     }

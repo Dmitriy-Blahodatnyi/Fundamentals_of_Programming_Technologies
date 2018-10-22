@@ -8,7 +8,8 @@ public class MatrixParse {
                 .substring(1, matrixString.length() - 1);
 
         var rows = 0;
-        for (var c : substring.toCharArray())
+        var charArray = substring.toCharArray();
+        for (var c : charArray)
             if (c == '[')
                 rows++;
 

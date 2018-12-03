@@ -1,1 +1,3 @@
-Fundamentals_of_Programming_Technologies
+ANTLR takes as input a grammar that specifies a language and generates as output source code for a recognizer of that language. While version 3 supported generating code in the programming languages Ada95, ActionScript, C, C#, Java, JavaScript, Objective-C, Perl, Python, Ruby, and Standard ML, the current release at present only targets Java, C#, C++, JavaScript, Python2, Python3, Swift, and Go. A language is specified using a context-free grammar which is expressed using Extended Backus–Naur Form (EBNF).
+
+ANTLR can generate lexers, parsers, tree parsers, and combined lexer-parsers. Parsers can automatically generate parse trees or abstract syntax trees which can be further processed with tree parsers. ANTLR provides a single consistent notation for specifying lexers, parsers, and tree parsers.

@@ -118,6 +118,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitRootRule(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitRootRule(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final RootContext root() throws RecognitionException {
@@ -169,6 +174,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitToSetVariable(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitToSetVariable(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class ExecuteExpressionContext extends InputContext {
 		public SumContext sum() {
@@ -184,6 +194,11 @@ public class MatrixParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitExecuteExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitExecuteExpression(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -264,6 +279,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakeAssignment(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakeAssignment(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AssignmentContext assignment() throws RecognitionException {
@@ -316,6 +336,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitToMultiple(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitToMultiple(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class MakePlusContext extends SumContext {
 		public SumContext sum() {
@@ -333,6 +358,11 @@ public class MatrixParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakePlus(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakePlus(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -421,6 +451,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitToInverse(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitToInverse(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class MakeMultipleContext extends MultipleContext {
 		public MultipleContext multiple() {
@@ -438,6 +473,11 @@ public class MatrixParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakeMultiple(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakeMultiple(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -527,6 +567,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakeInverse(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakeInverse(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class ToAtomContext extends InverseContext {
 		public AtomContext atom() {
@@ -540,6 +585,11 @@ public class MatrixParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitToAtom(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitToAtom(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -624,6 +674,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakeNumber(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakeNumber(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class MakeBracesContext extends AtomContext {
 		public TerminalNode LB() { return getToken(MatrixParser.LB, 0); }
@@ -640,6 +695,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakeBraces(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakeBraces(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class VariableContext extends AtomContext {
 		public TerminalNode ID() { return getToken(MatrixParser.ID, 0); }
@@ -652,6 +712,11 @@ public class MatrixParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitVariable(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitVariable(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 	public static class MakeMatrixContext extends AtomContext {
 		public TerminalNode MATRIX() { return getToken(MatrixParser.MATRIX, 0); }
@@ -663,6 +728,11 @@ public class MatrixParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof MatrixListener ) ((MatrixListener)listener).exitMakeMatrix(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MatrixVisitor ) return ((MatrixVisitor<? extends T>)visitor).visitMakeMatrix(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 

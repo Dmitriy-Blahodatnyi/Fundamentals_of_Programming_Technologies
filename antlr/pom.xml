@@ -16,6 +16,7 @@
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
             <version>LATEST</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jbehave</groupId>

@@ -1,6 +1,8 @@
 import FSM.StateFSM;
 import FSM.SwitchFSM;
 import FSM.TransTableFSM;
+import logger.TestLifecycleLogger;
+import logger.TimeExecutionLogger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class TestFSM {
+class TestFSM implements TestLifecycleLogger, TimeExecutionLogger {
     private static SwitchFSM switchFSM;
     private static TransTableFSM transTableFSM;
     private static StateFSM stateFSM;

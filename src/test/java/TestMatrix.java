@@ -1,3 +1,4 @@
+import generation.GenerationTest;
 import logger.TestLifecycleLogger;
 import logger.TimeExecutionLogger;
 import matrix.Matrix;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterfaceDynamicTests {
+class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, GenerationTest {
     @Test
     @DisplayName("Testing method 'toString'!!!")
     void testToString() {
@@ -108,13 +109,15 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
                         " of matrix-multiplier => unable to multiply!!!",
                 assertThrows(
                         IllegalArgumentException.class,
-                        () -> new Matrix(new double[][]{
-                                {13.3, 45.6, 76.4},
-                                {13.2, 56.5, 78.5}
-                        }).multiply(new Matrix(new double[][]{
-                                {67.4},
-                                {43.3}
-                        }))).getMessage()
+                        () -> new Matrix(new double[][]
+                                {{13.3, 45.6, 76.4}, {13.2, 56.5, 78.5}}
+                        )
+                                .multiply(
+                                        new Matrix(new double[][]{
+                                                {67.4}, {43.3}
+                                        })
+                                )
+                ).getMessage()
         );
     }
 
@@ -150,10 +153,13 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, TestInterf
                                 {1, 2, 45},
                                 {11.2, 48, 43.23},
                                 {3, 2.1, 5.6}
-                        }).addMatrix(new Matrix(new double[][]{
-                                {1, 2, 45},
-                                {11.2, 48, 43.23}
-                        }))).getMessage());
+                        })
+                                .addMatrix(
+                                        new Matrix(new double[][]{
+                                                {1, 2, 45}, {11.2, 48, 43.23}
+                                        })
+                                )
+                ).getMessage());
     }
 
     @Test

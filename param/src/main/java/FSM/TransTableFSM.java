@@ -6,7 +6,6 @@ import FSM.enums.State;
 import java.util.ArrayList;
 
 public class TransTableFSM extends FSM {
-
     private ArrayList<Transition> transitions = new ArrayList<>();
 
     public TransTableFSM() {

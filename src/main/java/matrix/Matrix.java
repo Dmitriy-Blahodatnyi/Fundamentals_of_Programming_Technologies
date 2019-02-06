@@ -13,8 +13,8 @@ public class Matrix {
     }
 
     private boolean hasEmptyRow(double[][] matrix) {
-        return matrix.length == 0
-                || Arrays.stream(matrix).anyMatch(aMatrix -> aMatrix.length == 0);
+        return matrix.length == 0 ||
+                Arrays.stream(matrix).anyMatch(aMatrix -> aMatrix.length == 0);
     }
 
     private boolean isNotMatrix(double[][] matrix) {
@@ -49,9 +49,9 @@ public class Matrix {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         var matrix1 = (Matrix) o;
-        return matrix[0].length == matrix1.getMatrix()[0].length
-                && matrix.length == matrix1.getMatrix().length
-                && Arrays.deepEquals(matrix, matrix1.getMatrix());
+        return matrix[0].length == matrix1.getMatrix()[0].length &&
+                matrix.length == matrix1.getMatrix().length &&
+                Arrays.deepEquals(matrix, matrix1.getMatrix());
     }
 
     public String toString() {
@@ -163,7 +163,8 @@ public class Matrix {
         // складаємо матрицю алгебраїчних доповнень
         for (var i = 0; i < matrix.length; i++)
             for (var j = 0; j < matrix[i].length; j++)
-                invertedMatrix[i][j] = Math.pow(-1, i + j) * findDeterminant(findMinor(this, i, j));
+                invertedMatrix[i][j] = Math.pow(-1, i + j) *
+                        findDeterminant(findMinor(this, i, j));
 
         // транспонуємо матрицю та одразу ділимо на визначник
         var det = 1.0 / determinant;

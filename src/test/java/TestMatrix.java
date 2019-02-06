@@ -111,12 +111,11 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, Generation
                         IllegalArgumentException.class,
                         () -> new Matrix(new double[][]
                                 {{13.3, 45.6, 76.4}, {13.2, 56.5, 78.5}}
+                        ).multiply(
+                                new Matrix(new double[][]{
+                                        {67.4}, {43.3}
+                                })
                         )
-                                .multiply(
-                                        new Matrix(new double[][]{
-                                                {67.4}, {43.3}
-                                        })
-                                )
                 ).getMessage()
         );
     }
@@ -153,12 +152,11 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, Generation
                                 {1, 2, 45},
                                 {11.2, 48, 43.23},
                                 {3, 2.1, 5.6}
-                        })
-                                .addMatrix(
-                                        new Matrix(new double[][]{
-                                                {1, 2, 45}, {11.2, 48, 43.23}
-                                        })
-                                )
+                        }).addMatrix(
+                                new Matrix(new double[][]{
+                                        {1, 2, 45}, {11.2, 48, 43.23}
+                                })
+                        )
                 ).getMessage());
     }
 

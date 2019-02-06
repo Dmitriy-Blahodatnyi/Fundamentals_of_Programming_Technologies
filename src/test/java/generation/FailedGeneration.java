@@ -8,7 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class FailedGeneration {
     static void run() {
-        assertAll("Assertion all of these exceptions: ",
+        assertAll(
+                "Assertion all of these exceptions: ",
                 () -> assertEquals(
                         "The matrix is null!!!",
                         assertThrows(

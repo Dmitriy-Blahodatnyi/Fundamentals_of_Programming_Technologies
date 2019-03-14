@@ -2,7 +2,7 @@ package interpreter;
 
 import antlr.classes.MatrixBaseVisitor;
 import antlr.classes.MatrixParser;
-import matrix.Matrix;
+import com.project.matrix.Matrix;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import parser.MatrixParse;
 
@@ -75,7 +75,9 @@ public class Interpreter extends MatrixBaseVisitor<Object> {
 
     public Object visitVariable(MatrixParser.VariableContext ctx) {
         var var = variables.get(ctx.ID().getText());
-        return var == null ? new ParseCancellationException("Variable is not defined!!!") : var;
+        return var == null ?
+                new ParseCancellationException("Variable is not defined!!!") :
+                var;
     }
 
     public Object visitMakeBraces(MatrixParser.MakeBracesContext ctx) {

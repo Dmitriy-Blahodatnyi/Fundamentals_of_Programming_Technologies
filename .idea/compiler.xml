@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="antlr" />
+        <module name="logger" />
+        <module name="matrix" />
         <module name="param" />
       </profile>
     </annotationProcessing>

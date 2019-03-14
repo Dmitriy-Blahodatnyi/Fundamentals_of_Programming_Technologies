@@ -1,7 +1,7 @@
-package FSM;
+package com.project.FSM;
 
-import FSM.enums.Event;
-import FSM.enums.State;
+import com.project.FSM.enums.Event;
+import com.project.FSM.enums.State;
 
 import java.util.ArrayList;
 

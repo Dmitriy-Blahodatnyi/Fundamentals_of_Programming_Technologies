@@ -1,6 +1,6 @@
 package parser;
 
-import matrix.Matrix;
+import com.project.matrix.Matrix;
 
 public class MatrixParse {
     public static Matrix parse(String matrixString) {

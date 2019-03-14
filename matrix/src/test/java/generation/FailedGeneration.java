@@ -1,6 +1,6 @@
 package generation;
 
-import matrix.Matrix;
+import com.project.matrix.Matrix;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;

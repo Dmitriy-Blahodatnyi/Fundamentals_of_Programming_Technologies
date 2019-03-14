@@ -1,10 +1,10 @@
 package generation;
 
-import matrix.Matrix;
+import com.project.matrix.Matrix;
 
-import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 class SuccessfulGeneration {
     static void run() {

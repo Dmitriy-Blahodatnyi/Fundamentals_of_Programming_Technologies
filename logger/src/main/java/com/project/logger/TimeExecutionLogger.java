@@ -1,4 +1,4 @@
-package logger;
+package com.project.logger;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;

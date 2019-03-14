@@ -1,4 +1,4 @@
-package matrix;
+package com.project.matrix;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -41,7 +41,9 @@ public class Matrix {
         if (hasEmptyRow(matrix))
             throw new IllegalStateException("The matrix is empty or has empty row(s)!!!");
         if (isNotMatrix(matrix))
-            throw new IllegalArgumentException("The 2-dimensional array is not a matrix!!!");
+            throw new IllegalArgumentException(
+                    "The 2-dimensional array is not a matrix!!!"
+            );
         this.matrix = matrix;
     }
 
@@ -130,7 +132,8 @@ public class Matrix {
         for (var i = 0; i < mtr.getMatrix().length; i++)
             for (var j = 0; i != row && j < mtr.getMatrix()[i].length; j++)
                 if (j != column)
-                    minor[i < row ? i : i - 1][j < column ? j : j - 1] = mtr.getMatrix()[i][j];
+                    minor[i < row ? i : i - 1][j < column ? j : j - 1] =
+                            mtr.getMatrix()[i][j];
 
         return new Matrix(minor);
     }
@@ -138,7 +141,9 @@ public class Matrix {
     private double findDeterminant(Matrix mtr) {
         var array = mtr.getMatrix();
         if (!isSquareMatrix(array))
-            throw new IllegalArgumentException("Only in square matrix determinant can be found!!!");
+            throw new IllegalArgumentException(
+                    "Only in square matrix determinant can be found!!!"
+            );
         if (array.length == 1) return array[0][0];
         if (array.length == 2) return array[0][0] * array[1][1] -
                 array[0][1] * array[1][0];
@@ -156,14 +161,16 @@ public class Matrix {
         // знаходимо визначник матриці
         var determinant = findDeterminant(this);
         if (determinant == 0)
-            throw new IllegalArgumentException("The matrix is singular (degenerate) - вироджена");
+            throw new IllegalArgumentException(
+                    "The matrix is singular (degenerate) - вироджена"
+            );
 
         var invertedMatrix = new double[matrix.length][matrix.length];
 
         // складаємо матрицю алгебраїчних доповнень
         for (var i = 0; i < matrix.length; i++)
             for (var j = 0; j < matrix[i].length; j++)
-                invertedMatrix[i][j] = Math.pow(-1, i + j) *
+                invertedMatrix[i][j] = pow(-1, i + j) *
                         findDeterminant(findMinor(this, i, j));
 
         // транспонуємо матрицю та одразу ділимо на визначник

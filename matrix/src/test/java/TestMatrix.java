@@ -1,18 +1,18 @@
+import com.project.logger.TestLifecycleLogger;
+import com.project.logger.TimeExecutionLogger;
+import com.project.matrix.Matrix;
 import generation.GenerationTest;
-import logger.TestLifecycleLogger;
-import logger.TimeExecutionLogger;
-import matrix.Matrix;
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.LUDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, GenerationTest {
@@ -104,8 +104,10 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger, Generation
         var aColumns = 3;
         var bRows = 2;
         assertEquals(
-                "Count of columns: " + aColumns +
-                        " of matrix-multiplicand IS NOT EQUAL TO count of rows: " + bRows +
+                "Count of columns: " +
+                        aColumns +
+                        " of matrix-multiplicand IS NOT EQUAL TO count of rows: " +
+                        bRows +
                         " of matrix-multiplier => unable to multiply!!!",
                 assertThrows(
                         IllegalArgumentException.class,

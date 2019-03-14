@@ -13,11 +13,11 @@ public interface GenerationTest {
     default Collection<DynamicTest> dynamicConstructorTests() {
         return Arrays.asList(
                 dynamicTest(
-                        "matrix.Matrix failed generation check!!!",
+                        "Matrix failed generation check!!!",
                         FailedGeneration::run
                 ),
                 dynamicTest(
-                        "matrix.Matrix successful generation check!!!",
+                        "Matrix successful generation check!!!",
                         SuccessfulGeneration::run
                 )
         );

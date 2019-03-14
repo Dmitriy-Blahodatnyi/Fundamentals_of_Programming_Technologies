@@ -10,9 +10,14 @@ public class Storage extends JUnitStory {
     public Configuration configuration() {
         return new MostUsefulConfiguration()
                 .useStoryLoader(new LoadFromClasspath(this.getClass()))
-                .useStoryReporterBuilder(new StoryReporterBuilder()
-                        .withDefaultFormats()
-                        .withFormats(StoryReporterBuilder.Format.CONSOLE, StoryReporterBuilder.Format.TXT));
+                .useStoryReporterBuilder(
+                        new StoryReporterBuilder()
+                                .withDefaultFormats()
+                                .withFormats(
+                                        StoryReporterBuilder.Format.CONSOLE,
+                                        StoryReporterBuilder.Format.TXT
+                                )
+                );
     }
 
     public InjectableStepsFactory stepsFactory() {

@@ -152,9 +152,9 @@ public class Matrix {
         return IntStream
                 .range(0, array[0].length)
                 .mapToDouble(
-                        i -> pow(-1, i)
-                                * array[0][i]
-                                * findDeterminant(findMinor(new Matrix(array), 0, i))
+                        i -> pow(-1, i) *
+                                array[0][i] *
+                                findDeterminant(findMinor(new Matrix(array), 0, i))
                 )
                 .sum();
     }

@@ -1,0 +1,13 @@
+language: java
+sudo: false # faster builds
+install: true
+
+jdk:
+  - oraclejdk11
+
+script:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test -B
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

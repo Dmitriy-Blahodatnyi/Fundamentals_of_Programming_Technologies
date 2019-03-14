@@ -1,10 +1,10 @@
-package interpreter;
+package com.project.interpreter;
 
-import antlr.classes.MatrixBaseVisitor;
-import antlr.classes.MatrixParser;
+import com.project.antlr.MatrixBaseVisitor;
+import com.project.antlr.MatrixParser;
 import com.project.matrix.Matrix;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
-import parser.MatrixParse;
+import com.project.parser.MatrixParse;
 
 import java.util.HashMap;
 

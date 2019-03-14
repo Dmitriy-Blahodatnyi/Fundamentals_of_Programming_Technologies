@@ -1,5 +1,5 @@
-// Generated from /home/d_blahodatnyi/Java/Fundamentals_of_Programming_Technologies/antlr/src/main/java/antlr/Matrix.g4 by ANTLR 4.7.2
-package antlr.classes;
+// Generated from /home/d_blahodatnyi/Java/Fundamentals_of_Programming_Technologies/antlr/src/main/java/com/project/antlr/Matrix.g4 by ANTLR 4.7.2
+package com.project.antlr;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

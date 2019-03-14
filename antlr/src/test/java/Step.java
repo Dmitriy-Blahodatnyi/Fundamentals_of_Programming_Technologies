@@ -1,4 +1,4 @@
-import evaluator.Evaluator;
+import com.project.evaluator.Evaluator;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;

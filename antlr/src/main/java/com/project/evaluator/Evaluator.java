@@ -1,8 +1,8 @@
-package evaluator;
+package com.project.evaluator;
 
-import antlr.classes.MatrixLexer;
-import antlr.classes.MatrixParser;
-import interpreter.Interpreter;
+import com.project.antlr.MatrixLexer;
+import com.project.antlr.MatrixParser;
+import com.project.interpreter.Interpreter;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 

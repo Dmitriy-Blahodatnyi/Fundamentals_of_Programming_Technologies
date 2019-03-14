@@ -1,4 +1,4 @@
-package parser;
+package com.project.parser;
 
 import com.project.matrix.Matrix;
 

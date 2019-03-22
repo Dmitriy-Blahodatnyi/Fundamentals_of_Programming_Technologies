@@ -22,7 +22,7 @@ class FailedInversion {
                         ).getMessage()
                 ),
                 () -> assertEquals(
-                        "The matrix is singular (degenerate) - вироджена",
+                        "The matrix is singular (degenerate) - вироджена!!!",
                         assertThrows(
                                 IllegalArgumentException.class,
                                 () -> new Matrix(new double[][]{

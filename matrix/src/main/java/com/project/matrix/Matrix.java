@@ -8,25 +8,6 @@ import static java.lang.Math.pow;
 public class Matrix {
     private double[][] matrix;
 
-    private boolean isNull(double[][] matrix) {
-        return matrix == null;
-    }
-
-    private boolean hasEmptyRow(double[][] matrix) {
-        return matrix.length == 0 ||
-                Arrays.stream(matrix).anyMatch(aMatrix -> aMatrix.length == 0);
-    }
-
-    private boolean isNotMatrix(double[][] matrix) {
-        return Arrays
-                .stream(matrix)
-                .anyMatch(aMatrix -> aMatrix.length != matrix[0].length);
-    }
-
-    private boolean isSquareMatrix(double[][] matrix) {
-        return matrix.length == matrix[0].length;
-    }
-
     public Matrix(double[][] matrix) {
         setMatrix(matrix);
     }
@@ -47,27 +28,27 @@ public class Matrix {
         this.matrix = matrix;
     }
 
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        var matrix1 = (Matrix) o;
-        return matrix[0].length == matrix1.getMatrix()[0].length &&
-                matrix.length == matrix1.getMatrix().length &&
-                Arrays.deepEquals(matrix, matrix1.getMatrix());
+    private boolean isNull(double[][] matrix) {
+        return matrix == null;
     }
 
-    public String toString() {
-        var builder = new StringBuilder("MATRIX={");
-        Arrays.stream(this.matrix).forEach(aMatrix -> {
-            builder.append(" [ ");
-            IntStream
-                    .range(0, this.matrix[0].length)
-                    .mapToObj(j -> String.format("%.2f ", aMatrix[j]))
-                    .forEach(builder::append);
-            builder.append("] ");
-        });
-        builder.append("}");
-        return builder.toString();
+    private boolean hasEmptyRow(double[][] matrix) {
+        return matrix.length == 0 ||
+                Arrays.stream(matrix).anyMatch(aMatrix -> aMatrix.length == 0);
+    }
+
+    private boolean isNotMatrix(double[][] matrix) {
+        return Arrays
+                .stream(matrix)
+                .anyMatch(aMatrix -> aMatrix.length != matrix[0].length);
+    }
+
+    private boolean isSquareMatrix(double[][] matrix) {
+        return matrix.length == matrix[0].length;
+    }
+
+    private boolean isSingleMatrix(double[][] matrix) {
+        return matrix.length == 1;
     }
 
     public Matrix multiply(double number) {
@@ -144,8 +125,6 @@ public class Matrix {
             throw new IllegalArgumentException(
                     "Only in square matrix determinant can be found!!!"
             );
-        if (array.length == 1)
-            return array[0][0];
         if (array.length == 2)
             return array[0][0] * array[1][1] - array[0][1] * array[1][0];
 
@@ -159,14 +138,16 @@ public class Matrix {
     }
 
     public Matrix findInvertibleMatrix() {
+        var single = isSingleMatrix(matrix);
+        if (single && this.matrix[0][0] != 0)
+            return this;
+
         // знаходимо визначник матриці
-        var determinant = findDeterminant(this);
+        var determinant = single ? 0 : findDeterminant(this);
         if (determinant == 0)
             throw new IllegalArgumentException(
-                    "The matrix is singular (degenerate) - вироджена"
+                    "The matrix is singular (degenerate) - вироджена!!!"
             );
-        if (this.matrix.length == 1)
-            return this;
 
         var invertedMatrix = new double[matrix.length][matrix.length];
 
@@ -186,5 +167,28 @@ public class Matrix {
             }
 
         return new Matrix(invertedMatrix);
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        var matrix1 = (Matrix) o;
+        return matrix[0].length == matrix1.getMatrix()[0].length &&
+                matrix.length == matrix1.getMatrix().length &&
+                Arrays.deepEquals(matrix, matrix1.getMatrix());
+    }
+
+    public String toString() {
+        var builder = new StringBuilder("MATRIX={");
+        Arrays.stream(this.matrix).forEach(aMatrix -> {
+            builder.append(" [ ");
+            IntStream
+                    .range(0, this.matrix[0].length)
+                    .mapToObj(j -> String.format("%.2f ", aMatrix[j]))
+                    .forEach(builder::append);
+            builder.append("] ");
+        });
+        builder.append("}");
+        return builder.toString();
     }
 }

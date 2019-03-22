@@ -1,4 +1,4 @@
-package generation;
+package instantiation;
 
 import com.project.matrix.Matrix;
 
@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-class SuccessfulGeneration {
+class SuccessfulInstantiation {
     static void run() {
         var matrix = new double[][]{{1}, {11.2}, {3}};
         var mx = new Matrix(matrix);

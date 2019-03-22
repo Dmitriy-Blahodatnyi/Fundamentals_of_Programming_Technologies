@@ -151,9 +151,8 @@ public class Matrix {
 
         return IntStream
                 .range(0, array[0].length)
-                .mapToDouble(
-                        i -> pow(-1, i) *
-                                array[0][i] *
+                .mapToDouble(i ->
+                        pow(-1, i) * array[0][i] *
                                 findDeterminant(findMinor(new Matrix(array), 0, i))
                 )
                 .sum();
@@ -166,6 +165,8 @@ public class Matrix {
             throw new IllegalArgumentException(
                     "The matrix is singular (degenerate) - вироджена"
             );
+        if (this.matrix.length == 1)
+            return this;
 
         var invertedMatrix = new double[matrix.length][matrix.length];
 

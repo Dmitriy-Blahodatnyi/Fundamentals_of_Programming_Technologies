@@ -1,4 +1,4 @@
-package generation;
+package instantiation;
 
 import com.project.matrix.Matrix;
 
@@ -6,10 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class FailedGeneration {
+class FailedInstantiation {
     static void run() {
         assertAll(
-                "Assertion all of these exceptions: ",
+                "Assertion of instantiation exceptions: ",
                 () -> assertEquals(
                         "The matrix is null!!!",
                         assertThrows(

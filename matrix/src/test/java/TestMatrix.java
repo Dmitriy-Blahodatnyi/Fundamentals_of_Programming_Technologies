@@ -17,7 +17,6 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger,
     @Test
     @DisplayName("Testing method 'toString'!!!")
     void testToString() {
-        var matrix = new Matrix(new double[][]{{1}, {11.2}, {3}});
         assertEquals(
                 "MATRIX=" +
                         "{" +
@@ -25,9 +24,8 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger,
                         " [ 11.20 ] " +
                         " [ 3.00 ] " +
                         "}",
-                matrix.toString()
+                new Matrix(new double[][]{{1}, {11.2}, {3}}).toString()
         );
-        matrix = new Matrix(new double[][]{{1, 45.5}, {11.2, 67.43}, {3, 0.34}});
         assertEquals(
                 "MATRIX=" +
                         "{" +
@@ -35,7 +33,7 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger,
                         " [ 11.20 67.43 ] " +
                         " [ 3.00 0.34 ] " +
                         "}",
-                matrix.toString()
+                new Matrix(new double[][]{{1, 45.5}, {11.2, 67.43}, {3, 0.34}}).toString()
         );
     }
 

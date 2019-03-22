@@ -31,6 +31,15 @@ class FailedInversion {
                                         {5, 7, 9}
                                 }).findInvertibleMatrix()
                         ).getMessage()
+                ),
+                () -> assertEquals(
+                        "The matrix is singular (degenerate) - вироджена!!!",
+                        assertThrows(
+                                IllegalArgumentException.class,
+                                () -> new Matrix(new double[][]{
+                                        {0}
+                                }).findInvertibleMatrix()
+                        ).getMessage()
                 )
         );
     }

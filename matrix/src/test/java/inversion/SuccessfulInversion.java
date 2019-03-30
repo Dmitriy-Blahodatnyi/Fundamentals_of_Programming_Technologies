@@ -10,22 +10,30 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SuccessfulInversion {
     static void run() {
-        var matrix = new double[][]{
-                {1.1, 34.65, 97.12},
-                {0.3, 1.2, 4},
-                {5.55, 6.56, 0.1}
+        var matrix = new double[][][]{
+                {
+                        {1.1, 34.65, 97.12},
+                        {0.3, 1.2, 4},
+                        {5.55, 6.56, 0.1}
+                },
+                {
+                        {3, 4},
+                        {2, 1}
+                }
         };
         assertArrayEquals(
                 new double[][]{{4.4}},
                 new Matrix(new double[][]{{4.4}}).findInvertibleMatrix().getMatrix()
         );
 
-        RealMatrix realMatrix = new Array2DRowRealMatrix(matrix);
+        for (var doubles : matrix) {
+            RealMatrix realMatrix = new Array2DRowRealMatrix(doubles);
 
-        matrix = new Matrix(matrix).findInvertibleMatrix().getMatrix();
-        var real = new LUDecomposition(realMatrix).getSolver().getInverse().getData();
-        for (var i = 0; i < matrix.length; i++)
-            for (var j = 0; j < matrix[0].length; j++)
-                assertEquals(real[i][j], matrix[i][j], 0.00000000000001d);
+            var inverted = new Matrix(doubles).findInvertibleMatrix().getMatrix();
+            var real = new LUDecomposition(realMatrix).getSolver().getInverse().getData();
+            for (var i = 0; i < inverted.length; i++)
+                for (var j = 0; j < inverted[0].length; j++)
+                    assertEquals(real[i][j], inverted[i][j], 0.00000000000001d);
+        }
     }
 }

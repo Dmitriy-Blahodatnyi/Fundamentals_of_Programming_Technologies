@@ -125,6 +125,8 @@ public class Matrix {
             throw new IllegalArgumentException(
                     "Only in square matrix determinant can be found!!!"
             );
+        if (array.length == 1)
+            return array[0][0];
         if (array.length == 2)
             return array[0][0] * array[1][1] - array[0][1] * array[1][0];
 

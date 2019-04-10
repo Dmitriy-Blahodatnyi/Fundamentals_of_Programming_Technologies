@@ -39,6 +39,9 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger,
         assertNotSame(matrix, matrix1);
         assertNotEquals(matrix, matrix1);
         assertNotEquals(matrix, null);
+        assertNotEquals(matrix, new Object());
+        assertNotEquals(matrix, new Matrix(new double[][]{{1, 2}, {0, 0}}));
+        assertNotEquals(matrix, new Matrix(new double[][]{{1}}));
     }
 
     @Test

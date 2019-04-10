@@ -10,11 +10,12 @@ public class Evaluator {
     private Interpreter interpreter = new Interpreter();
 
     public String evaluate(String str) {
-        return interpreter
-                .visit(new MatrixParser(
+        return interpreter.visit(
+                new MatrixParser(
                         new CommonTokenStream(
                                 new MatrixLexer(CharStreams.fromString(str))
                         )
-                ).input()).toString();
+                ).input()
+        ).toString();
     }
 }

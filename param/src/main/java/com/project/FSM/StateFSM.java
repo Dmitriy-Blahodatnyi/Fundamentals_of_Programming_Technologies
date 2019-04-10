@@ -20,7 +20,8 @@ public class StateFSM extends FSM {
     }
 
     protected State nextState(Event event) {
-        if (event == null) return null;
+        if (event == null)
+            return null;
         var state = setState(currentState);
         switch (event) {
             case UNDERSCORE:
@@ -46,18 +47,23 @@ public class StateFSM extends FSM {
         State underscore() {
             return null;
         }
+
         State digit() {
             return null;
         }
+
         State sharp() {
             return null;
         }
+
         State ampersand() {
             return null;
         }
+
         State percent() {
             return null;
         }
+
         State upper() {
             return null;
         }
@@ -79,6 +85,7 @@ public class StateFSM extends FSM {
         protected State digit() {
             return State.q2;
         }
+
         protected State sharp() {
             return State.q3;
         }
@@ -88,6 +95,7 @@ public class StateFSM extends FSM {
         protected State sharp() {
             return State.q4;
         }
+
         protected State ampersand() {
             return State.q5;
         }
@@ -97,6 +105,7 @@ public class StateFSM extends FSM {
         protected State upper() {
             return State.q6;
         }
+
         protected State percent() {
             return State.q7;
         }
@@ -106,6 +115,7 @@ public class StateFSM extends FSM {
         protected State upper() {
             return State.q6;
         }
+
         protected State percent() {
             return State.q7;
         }
@@ -115,6 +125,7 @@ public class StateFSM extends FSM {
         protected State upper() {
             return State.q6;
         }
+
         protected State percent() {
             return State.q7;
         }

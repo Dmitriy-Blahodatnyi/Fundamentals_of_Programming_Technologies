@@ -19,7 +19,8 @@ public class Interpreter extends MatrixBaseVisitor<Object> {
         return visit(ctx.assignment());
     }
 
-    public Object visitExecuteExpression(MatrixParser.ExecuteExpressionContext ctx) {
+    public Object visitExecuteExpression(
+            MatrixParser.ExecuteExpressionContext ctx) {
         return visit(ctx.sum());
     }
 
@@ -36,7 +37,8 @@ public class Interpreter extends MatrixBaseVisitor<Object> {
     public Object visitMakePlus(MatrixParser.MakePlusContext ctx) {
         var var0 = visit(ctx.multiple());
         var var1 = visit(ctx.sum());
-        return var0.getClass() != Matrix.class || var1.getClass() != Matrix.class ?
+        return var0.getClass() != Matrix.class ||
+                var1.getClass() != Matrix.class ?
                 new ParseCancellationException("Invalid type!!!") :
                 ((Matrix) var0).addMatrix((Matrix) var1);
     }
@@ -44,9 +46,11 @@ public class Interpreter extends MatrixBaseVisitor<Object> {
     public Object visitMakeMultiple(MatrixParser.MakeMultipleContext ctx) {
         var var0 = visit(ctx.multiple());
         var var1 = visit(ctx.inverse());
-        return var0.getClass() == Matrix.class && var1.getClass() == Double.class ?
+        return var0.getClass() == Matrix.class &&
+                var1.getClass() == Double.class ?
                 ((Matrix) var0).multiply((Double) var1) :
-                var1.getClass() == Matrix.class && var0.getClass() == Double.class ?
+                var1.getClass() == Matrix.class &&
+                        var0.getClass() == Double.class ?
                         ((Matrix) var1).multiply((Double) var0) :
                         ((Matrix) var0).multiply((Matrix) var1);
     }

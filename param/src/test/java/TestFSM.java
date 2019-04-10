@@ -33,7 +33,8 @@ class TestFSM implements TestLifecycleLogger, TimeExecutionLogger {
     }
 
     static class FSMProvider implements ArgumentsProvider {
-        public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
+        public Stream<? extends Arguments> provideArguments(
+                ExtensionContext context) {
             return Stream.of(
                     Arguments.of(null, false),
                     Arguments.of("", false),
@@ -42,7 +43,10 @@ class TestFSM implements TestLifecycleLogger, TimeExecutionLogger {
                     Arguments.of("_1#&AXSDCFVGB%", true),
                     Arguments.of("-132##%", false),
                     Arguments.of("_#&% ", false),
-                    Arguments.of("_88888888888888888888#&AAAAAAAAAAAAAAAAAAAAA%", true)
+                    Arguments.of(
+                            "_88888888888888888888#&AAAAAAAAAAAAAAAAAAAAA%",
+                            true
+                    )
             );
         }
     }
@@ -59,10 +63,7 @@ class TestFSM implements TestLifecycleLogger, TimeExecutionLogger {
     }
 
     private static Stream<String> provideCorrectString() {
-        return Stream.of(
-                "_67483920#&%",
-                "_00##TTTTTT%"
-        );
+        return Stream.of("_67483920#&%", "_00##TTTTTT%");
     }
 
     @ParameterizedTest
@@ -82,17 +83,11 @@ class TestFSM implements TestLifecycleLogger, TimeExecutionLogger {
     }
 
     private static Stream<String> provideInCorrectString() {
-        return Stream.of(
-                "_______%",
-                "_##&"
-        );
+        return Stream.of("_______%", "_##&");
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {
-            "_#&#&#&#&#&#&",
-            "_%"
-    })
+    @ValueSource(strings = {"_#&#&#&#&#&#&", "_%"})
     @MethodSource("provideInCorrectString")
     @CsvFileSource(resources = "InCorrectStrings.csv")
     void TestFSMScanInCorrectStrings(String str) {

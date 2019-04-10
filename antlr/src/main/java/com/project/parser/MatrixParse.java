@@ -14,15 +14,11 @@ public class MatrixParse {
 
         var doubles = new double[rows][];
 
-        for (
-                int i = 0, index = substring.indexOf('[');
+        for (int i = 0, index = substring.indexOf('[');
                 index != -1;
-                i++, index = substring.indexOf('[')
-        ) {
+                i++, index = substring.indexOf('[')) {
             var cb = substring.indexOf(']');
-            var numbers = substring
-                    .substring(index + 1, cb)
-                    .split(",");
+            var numbers = substring.substring(index + 1, cb).split(",");
             doubles[i] = new double[numbers.length];
             for (var j = 0; j < numbers.length; j++)
                 doubles[i][j] = Double.parseDouble(numbers[j]);

@@ -17,12 +17,9 @@ class SuccessfulAddition {
         };
 
         assertArrayEquals(
-                new Array2DRowRealMatrix(augend)
-                        .add(new Array2DRowRealMatrix(addend))
-                        .getData(),
-                new Matrix(augend)
-                        .addMatrix(new Matrix(addend))
-                        .getMatrix()
+                new Array2DRowRealMatrix(augend).add(new Array2DRowRealMatrix(
+                        addend)).getData(),
+                new Matrix(augend).addMatrix(new Matrix(addend)).getMatrix()
         );
     }
 }

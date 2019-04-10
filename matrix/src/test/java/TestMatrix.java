@@ -18,22 +18,16 @@ class TestMatrix implements TestLifecycleLogger, TimeExecutionLogger,
     @DisplayName("Testing method 'toString'!!!")
     void testToString() {
         assertEquals(
-                "MATRIX=" +
-                        "{" +
-                        " [ 1.00 ] " +
-                        " [ 11.20 ] " +
-                        " [ 3.00 ] " +
-                        "}",
+                "MATRIX={ [ 1.00 ]  [ 11.20 ]  [ 3.00 ] }",
                 new Matrix(new double[][]{{1}, {11.2}, {3}}).toString()
         );
         assertEquals(
-                "MATRIX=" +
-                        "{" +
-                        " [ 1.00 45.50 ] " +
-                        " [ 11.20 67.43 ] " +
-                        " [ 3.00 0.34 ] " +
-                        "}",
-                new Matrix(new double[][]{{1, 45.5}, {11.2, 67.43}, {3, 0.34}}).toString()
+                "MATRIX={ [ 1.00 45.50 ]  [ 11.20 67.43 ]  [ 3.00 0.34 ] }",
+                new Matrix(new double[][]{
+                        {1, 45.5},
+                        {11.2, 67.43},
+                        {3, 0.34}
+                }).toString()
         );
     }
 

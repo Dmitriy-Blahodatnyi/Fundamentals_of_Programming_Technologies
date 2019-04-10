@@ -23,17 +23,25 @@ class SuccessfulInversion {
         };
         assertArrayEquals(
                 new double[][]{{4.4}},
-                new Matrix(new double[][]{{4.4}}).findInvertibleMatrix().getMatrix()
+                new Matrix(new double[][]{{4.4}}).findInvertibleMatrix()
+                        .getMatrix()
         );
 
         for (var doubles : matrix) {
             RealMatrix realMatrix = new Array2DRowRealMatrix(doubles);
 
-            var inverted = new Matrix(doubles).findInvertibleMatrix().getMatrix();
-            var real = new LUDecomposition(realMatrix).getSolver().getInverse().getData();
+            var inverted =
+                    new Matrix(doubles).findInvertibleMatrix().getMatrix();
+            var real = new LUDecomposition(realMatrix).getSolver()
+                    .getInverse()
+                    .getData();
             for (var i = 0; i < inverted.length; i++)
                 for (var j = 0; j < inverted[0].length; j++)
-                    assertEquals(real[i][j], inverted[i][j], 0.00000000000001d);
+                    assertEquals(
+                            real[i][j],
+                            inverted[i][j],
+                            0.00000000000001d
+                    );
         }
     }
 }

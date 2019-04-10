@@ -16,28 +16,21 @@ class MultiplicationByNumber {
         assertAll(
                 "Assertion of multiplication exceptions: ",
                 () -> assertArrayEquals(
-                        new Array2DRowRealMatrix(finalMatrix)
-                                .scalarMultiply(2)
+                        new Array2DRowRealMatrix(finalMatrix).scalarMultiply(2)
                                 .getData(),
-                        new Matrix(finalMatrix)
-                                .multiply(2)
-                                .getMatrix()
+                        new Matrix(finalMatrix).multiply(2).getMatrix()
                 ),
                 () -> assertArrayEquals(
                         new Array2DRowRealMatrix(finalMatrix1)
                                 .scalarMultiply(0)
                                 .getData(),
-                        new Matrix(finalMatrix1)
-                                .multiply(0)
-                                .getMatrix()
+                        new Matrix(finalMatrix1).multiply(0).getMatrix()
                 ),
                 () -> assertArrayEquals(
                         new Array2DRowRealMatrix(finalMatrix2)
                                 .scalarMultiply(-2.23)
                                 .getData(),
-                        new Matrix(finalMatrix2)
-                                .multiply(-2.23)
-                                .getMatrix()
+                        new Matrix(finalMatrix2).multiply(-2.23).getMatrix()
                 )
         );
     }

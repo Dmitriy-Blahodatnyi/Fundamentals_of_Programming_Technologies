@@ -11,15 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SuccessfulInversion {
     static void run() {
         var matrix = new double[][][]{
-                {
-                        {1.1, 34.65, 97.12},
-                        {0.3, 1.2, 4},
-                        {5.55, 6.56, 0.1}
-                },
-                {
-                        {3, 4},
-                        {2, 1}
-                }
+                {{1.1, 34.65, 97.12}, {0.3, 1.2, 4}, {5.55, 6.56, 0.1}},
+                {{3, 4}, {2, 1}}
         };
         assertArrayEquals(
                 new double[][]{{4.4}},

@@ -3,10 +3,9 @@ package com.project.interpreter;
 import com.project.antlr.MatrixBaseVisitor;
 import com.project.antlr.MatrixParser;
 import com.project.matrix.Matrix;
-import org.antlr.v4.runtime.misc.ParseCancellationException;
 import com.project.parser.MatrixParse;
-
 import java.util.HashMap;
+import org.antlr.v4.runtime.misc.ParseCancellationException;
 
 public class Interpreter extends MatrixBaseVisitor<Object> {
     private HashMap<String, Object> variables = new HashMap<>();

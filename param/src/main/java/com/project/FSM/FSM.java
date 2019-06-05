@@ -6,9 +6,7 @@ import com.project.FSM.enums.State;
 public abstract class FSM {
     State currentState;
 
-    FSM() {
-        currentState = State.q0;
-    }
+    FSM() { currentState = State.q0; }
 
     private Event recognizeEvent(char symbol) {
         return symbol == '_' ?

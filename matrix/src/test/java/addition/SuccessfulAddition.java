@@ -9,7 +9,7 @@ class SuccessfulAddition {
     static void run() {
         var augend = new double[][]{
                 {12.3, 56.45, 87.67},
-                {52.87, 0, -64.24},
+                {52.87, 0, -64.24}
         };
         var addend = new double[][]{
                 {14.87, 90.5, -123.987},

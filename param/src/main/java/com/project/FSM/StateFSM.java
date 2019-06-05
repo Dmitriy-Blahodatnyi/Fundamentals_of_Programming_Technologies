@@ -44,93 +44,56 @@ public class StateFSM extends FSM {
     }
 
     static abstract class AbstractState {
-        State underscore() {
-            return null;
-        }
+        State underscore() { return null; }
 
-        State digit() {
-            return null;
-        }
+        State digit() { return null; }
 
-        State sharp() {
-            return null;
-        }
+        State sharp() { return null; }
 
-        State ampersand() {
-            return null;
-        }
+        State ampersand() { return null; }
 
-        State percent() {
-            return null;
-        }
+        State percent() { return null; }
 
-        State upper() {
-            return null;
-        }
+        State upper() { return null; }
     }
 
     static class q0 extends AbstractState {
-        protected State underscore() {
-            return State.q1;
-        }
+        protected State underscore() { return State.q1; }
     }
 
     static class q1 extends AbstractState {
-        protected State digit() {
-            return State.q2;
-        }
+        protected State digit() { return State.q2; }
     }
 
     static class q2 extends AbstractState {
-        protected State digit() {
-            return State.q2;
-        }
+        protected State digit() { return State.q2; }
 
-        protected State sharp() {
-            return State.q3;
-        }
+        protected State sharp() { return State.q3; }
     }
 
     static class q3 extends AbstractState {
-        protected State sharp() {
-            return State.q4;
-        }
+        protected State sharp() { return State.q4; }
 
-        protected State ampersand() {
-            return State.q5;
-        }
+        protected State ampersand() { return State.q5; }
     }
 
     static class q4 extends AbstractState {
-        protected State upper() {
-            return State.q6;
-        }
+        protected State upper() { return State.q6; }
 
-        protected State percent() {
-            return State.q7;
-        }
+        protected State percent() { return State.q7; }
     }
 
     static class q5 extends AbstractState {
-        protected State upper() {
-            return State.q6;
-        }
+        protected State upper() { return State.q6; }
 
-        protected State percent() {
-            return State.q7;
-        }
+        protected State percent() { return State.q7; }
     }
 
     static class q6 extends AbstractState {
-        protected State upper() {
-            return State.q6;
-        }
+        protected State upper() { return State.q6; }
 
-        protected State percent() {
-            return State.q7;
-        }
+        protected State percent() { return State.q7; }
     }
 
-    private static class q7 extends AbstractState {
-    }
+    private static class q7 extends AbstractState {}
 }

@@ -8,13 +8,9 @@ import static java.lang.Math.pow;
 public class Matrix {
     private double[][] matrix;
 
-    public Matrix(double[][] matrix) {
-        setMatrix(matrix);
-    }
+    public Matrix(double[][] matrix) { setMatrix(matrix); }
 
-    public double[][] getMatrix() {
-        return matrix;
-    }
+    public double[][] getMatrix() { return matrix; }
 
     public void setMatrix(double[][] matrix) {
         if (isNull(matrix))
@@ -28,9 +24,7 @@ public class Matrix {
         this.matrix = matrix;
     }
 
-    private boolean isNull(double[][] matrix) {
-        return matrix == null;
-    }
+    private boolean isNull(double[][] matrix) { return matrix == null; }
 
     private boolean hasEmptyRow(double[][] matrix) {
         return matrix.length == 0 ||

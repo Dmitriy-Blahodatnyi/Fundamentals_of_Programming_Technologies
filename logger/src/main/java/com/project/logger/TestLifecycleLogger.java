@@ -14,14 +14,10 @@ public interface TestLifecycleLogger {
     Logger LOG = Logger.getLogger(TestLifecycleLogger.class.getName());
 
     @BeforeAll
-    default void beforeAllTests() {
-        LOG.info("Before all tests");
-    }
+    default void beforeAllTests() { LOG.info("Before all tests"); }
 
     @AfterAll
-    default void afterAllTests() {
-        LOG.info("After all tests");
-    }
+    default void afterAllTests() { LOG.info("After all tests"); }
 
     @BeforeEach
     default void beforeEachTest(TestInfo testInfo) {

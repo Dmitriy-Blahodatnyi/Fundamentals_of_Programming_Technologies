@@ -6,41 +6,35 @@ import com.project.FSM.enums.State;
 import java.util.ArrayList;
 
 public class StateFSM extends FSM {
-    private static ArrayList<AbstractState> list = new ArrayList<>();
+    private static final ArrayList<AbstractState> LIST = new ArrayList<>();
 
     static {
-        list.add(new q0());
-        list.add(new q1());
-        list.add(new q2());
-        list.add(new q3());
-        list.add(new q4());
-        list.add(new q5());
-        list.add(new q6());
-        list.add(new q7());
+        LIST.add(new q0());
+        LIST.add(new q1());
+        LIST.add(new q2());
+        LIST.add(new q3());
+        LIST.add(new q4());
+        LIST.add(new q5());
+        LIST.add(new q6());
+        LIST.add(new q7());
     }
 
     protected State nextState(Event event) {
         if (event == null)
             return null;
         var state = setState(currentState);
-        switch (event) {
-            case UNDERSCORE:
-                return state.underscore();
-            case DIGIT:
-                return state.digit();
-            case SHARP:
-                return state.sharp();
-            case AMPERSAND:
-                return state.ampersand();
-            case PERCENT:
-                return state.percent();
-            default:
-                return state.upper();
-        }
+        return switch (event) {
+            case UNDERSCORE -> state.underscore();
+            case DIGIT -> state.digit();
+            case SHARP -> state.sharp();
+            case AMPERSAND -> state.ampersand();
+            case PERCENT -> state.percent();
+            default -> state.upper();
+        };
     }
 
     private AbstractState setState(State states) {
-        return list.get(states.ordinal());
+        return LIST.get(states.ordinal());
     }
 
     static abstract class AbstractState {

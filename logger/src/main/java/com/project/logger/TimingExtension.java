@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class TimingExtension implements BeforeTestExecutionCallback,
         AfterTestExecutionCallback {
-    private static final Logger logger =
+    private static final Logger LOGGER =
             Logger.getLogger(TimingExtension.class.getName());
     private static final String START_TIME = "start time";
 
@@ -18,7 +18,7 @@ public class TimingExtension implements BeforeTestExecutionCallback,
 
     public void afterTestExecution(ExtensionContext context) {
         long startTime = getStore(context).remove(START_TIME, long.class);
-        logger.info(() -> String.format(
+        LOGGER.info(() -> String.format(
                 "Method [%s] took %s ms.",
                 context.getRequiredTestMethod().getName(),
                 System.currentTimeMillis() - startTime

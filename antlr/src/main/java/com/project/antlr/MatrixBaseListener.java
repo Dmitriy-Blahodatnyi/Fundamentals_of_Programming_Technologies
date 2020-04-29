@@ -1,4 +1,4 @@
-// Generated from /home/d_blahodatnyi/Java/Fundamentals_of_Programming_Technologies/antlr/src/main/java/com/project/antlr/Matrix.g4 by ANTLR 4.7.2
+// Generated from D:/IdeaProjects/Fundamentals_of_Programming_Technologies/antlr/src/main/java/com/project/antlr\Matrix.g4 by ANTLR 4.8
 package com.project.antlr;
 
 import org.antlr.v4.runtime.ParserRuleContext;

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 
 public class Interpreter extends MatrixBaseVisitor<Object> {
-    private HashMap<String, Object> variables = new HashMap<>();
+    private final HashMap<String, Object> VARIABLES = new HashMap<>();
 
     public Object visitRootRule(MatrixParser.RootRuleContext ctx) {
         return visit(ctx.input());
@@ -25,8 +25,8 @@ public class Interpreter extends MatrixBaseVisitor<Object> {
 
     public Object visitMakeAssignment(MatrixParser.MakeAssignmentContext ctx) {
         var text = ctx.ID().getText();
-        variables.put(text, visit(ctx.sum()));
-        return variables.get(text);
+        VARIABLES.put(text, visit(ctx.sum()));
+        return VARIABLES.get(text);
     }
 
     public Object visitToMultiple(MatrixParser.ToMultipleContext ctx) {
@@ -77,7 +77,7 @@ public class Interpreter extends MatrixBaseVisitor<Object> {
     }
 
     public Object visitVariable(MatrixParser.VariableContext ctx) {
-        var var = variables.get(ctx.ID().getText());
+        var var = VARIABLES.get(ctx.ID().getText());
         return var == null ?
                 new ParseCancellationException("Variable is not defined!!!") :
                 var;

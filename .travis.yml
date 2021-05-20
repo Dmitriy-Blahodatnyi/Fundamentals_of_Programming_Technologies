@@ -7,7 +7,7 @@ jdk: openjdk16
 script:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn test -B
-  - mvn compile exec:java -pl antlr -Dexec.mainClass=Main
+  - mvn compile exec:java -pl antlr -Dexec.mainClass=com.project.Main
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

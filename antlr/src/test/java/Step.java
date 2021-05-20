@@ -11,9 +11,7 @@ public class Step extends Steps {
     private String str;
 
     @Given("a new evaluator")
-    public void newEvaluator() {
-        evaluator = new Evaluator();
-    }
+    public void newEvaluator() { evaluator = new Evaluator(); }
 
     @When("I evaluate string $string")
     public void evaluateString(String string) {
@@ -21,7 +19,5 @@ public class Step extends Steps {
     }
 
     @Then("I should get result $result")
-    public void result(String result) {
-        assertEquals(result, str);
-    }
+    public void result(String result) { assertEquals(result, str); }
 }
